@@ -10,7 +10,7 @@ from googleapiclient.http import MediaFileUpload, MediaInMemoryUpload, MediaIoBa
 
 
 class Drive:
-    CLIENT_SECRET_FILE = 'aiogram-bot-template-master/data/client_secret_554888114776_kklv564arnv3av1rkb9qri3p5fhl4i0t_apps.json'
+    CLIENT_SECRET_FILE = 'C:/Python/programs/bots/study_bot/data/client_secret_554888114776_kklv564arnv3av1rkb9qri3p5fhl4i0t_apps.json'
     API_NAME = 'drive'
     API_VERSION = 'v3'
     SCOPES = ['https://www.googleapis.com/auth/drive']
@@ -36,7 +36,7 @@ class Drive:
         return subject_folder_id.get('id')
 
     async def upload_home_work(self, home_work_files: list, files_mime: list, drive_folder: str, files_path: list):
-        # check folder
+        # check folder exist
         query = f"parents = 'application/vnd.google-apps.folder'"
 
         response = self.service.files().list(q="mimeType='application/vnd.google-apps.folder'").execute()

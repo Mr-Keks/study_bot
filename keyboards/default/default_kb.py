@@ -14,7 +14,7 @@ create_or_connect = ReplyKeyboardMarkup(
 	one_time_keyboard=True
 )
 
-add_subjects = ReplyKeyboardMarkup(
+add_subjects_button = ReplyKeyboardMarkup(
 	keyboard=[
 		[
 			KeyboardButton(text="Додати предмети")
@@ -69,6 +69,9 @@ main_menu_action_button = ReplyKeyboardMarkup(
 		[
 			KeyboardButton(text="Отримати код групи"),
 			KeyboardButton(text="Змінити групу")
+		],
+		[
+			KeyboardButton(text="Вийти з групи")
 		]
 
 	],

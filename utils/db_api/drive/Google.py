@@ -14,15 +14,13 @@ def Create_Service(client_secret_file, api_name, api_version, *scopes):
     API_VERSION = api_version
     SCOPES = [scope for scope in scopes[0]]
 
-
     cred = None
 
-    pickle_file = f'C:/Python/programs/bots/aiogram-bot-template-master/data/token_{API_SERVICE_NAME}_{API_VERSION}.pickle'
-    print(os.path.exists(pickle_file))
+    pickle_file = f'C:/Python/programs/bots/study_bot/data/token_{API_SERVICE_NAME}_{API_VERSION}.pickle'
+
     if os.path.exists(pickle_file):
         with open(pickle_file, 'rb') as token:
             cred = pickle.load(token)
-            #print(cred)
 
     if not cred or not cred.valid:
         if cred and cred.expired and cred.refresh_token:

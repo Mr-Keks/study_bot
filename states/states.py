@@ -30,8 +30,13 @@ class get_home_work(StatesGroup):
 class group_key(StatesGroup):
     get_key = State()
 
+
 class group(StatesGroup):
     new_group = State()
+
+
+class group_leave(StatesGroup):
+    leave = State()
 
 
 
